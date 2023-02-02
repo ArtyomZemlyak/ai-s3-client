@@ -1,0 +1,26 @@
+# First time:
+# pip install pre-commit
+# pre-commit autoupdate
+# pre-commit install
+# pre-commit run
+# if "no files to check" -> pre-commit run --all-files
+# git add .
+# git commit
+
+# Next times:
+# git add .
+# pre-commit run
+# git add .
+# git commit
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+    -   id: black
